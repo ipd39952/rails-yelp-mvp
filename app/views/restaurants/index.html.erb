@@ -1,4 +1,5 @@
+<div class="d-flex w-50 center"><%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary"%></div>
 <%@restaurants.each do |f| %>
-<div><%=f.name %> | <%=f.address %> | <%=f.phone_number %></div>
-<% end %>
+<div class="card" style="width: 28rem; padding: 10px; text-align: center; margin: 10px; display: inline-block;"><h2><%=f.name %></h2>  <h4><%=f.address %></h4> <h4><%=f.phone_number %></h4> <h4><%=f.category %></h4> <%= link_to "See details", restaurant_path(f), class: "btn btn-primary"%> </div>
 
+<% end %>

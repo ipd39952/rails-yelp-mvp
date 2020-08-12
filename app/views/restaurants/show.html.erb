@@ -1,5 +1,15 @@
-<h1><%= @restaurant.name %> </h1>
+<div class="container">
+  <h1><%= @restaurant.name %> </h1>
 
-<br>
-<h3><%= @restaurant.address %> </h3>
-<h3><%= @restaurant.phone_number %> </h3>
+  <br>
+  <h3><%= @restaurant.address %> </h3>
+  <h3><%= @restaurant.phone_number %> </h3>
+
+  <% @restaurant.reviews.each do |review| %>
+  <span class="card w-25 my-2 text-justify"><%= review.content  %> <strong>Rating:</strong><%= review.rating  %></span>
+  <% end %>
+
+  <%= link_to "Go back", restaurants_path, class: "btn btn-danger"%>
+  <%= link_to "Add a review", new_restaurant_review_path(@restaurant), class: "btn btn-success"%>
+</div>
+

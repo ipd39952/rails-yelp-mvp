@@ -1,7 +1,7 @@
-<%= simple_form_for @restaurant do |f| %>
-  <%= f.input :name %>
+<div class="mx-auto w-50 text-justify pt-5"><%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name%>
   <%= f.input :address %>
   <%= f.input :phone_number %>
   <%= f.input :category, collection: Restaurant::CATEGORIES %>
-  <%= f.submit "Submit review", class: "btn btn-primary" %>
-<% end %>
+  <%= f.submit "Submit restaurant", class: "btn btn-primary" %>
+<% end %></div>
